@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.quickstart.springboottest.dao.StudentMapper">
+
+    <resultMap id="stu" type="com.quickstart.springboottest.domain.Student">
+        <id property="no" column="sno"/>
+        <result property="name" column="sname"/>
+        <result property="age" column="sage"/>
+        <result property="gender" column="sgender"/>
+    </resultMap>
+
+    <select id="getStudents" resultMap="stu">
+        select * from student
+    </select>
+</mapper>
